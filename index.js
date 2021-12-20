@@ -74,10 +74,9 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((userresponses) =>{
-        writeToFile(`${userresponses.title}.md`, generateMarkdown({ ...userresponses}));
-    })
+    inquirer.prompt(questions);
 }
+
 
 // Function call to initialize app
 init();
